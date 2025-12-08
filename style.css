@@ -158,8 +158,6 @@ a {
     background-color: black;
     padding: 25px;
     justify-content: center;
-    /* align-content:center ; */
-    /* align-items: center;  */
     justify-items: center;
 }
 
@@ -168,6 +166,14 @@ a {
     list-style-type: none;
     color: white;
     padding: 25px;
+    border-bottom: 2px solid yellow;
+    animation: yashanimatin 3s ease-in-out  infinite;
+}
+@keyframes yashanimatin{
+   from{}
+   to{
+    transform: translateX(100px);
+   }
 }
 
 .nav>ul>li>i {
@@ -178,7 +184,6 @@ a {
 .chary {
     display: inline;
     background-color: #2fdab8;
-    /* color: white; */
     height: 100px;
     width: 300px;
     padding: 20px 100px;
@@ -195,71 +200,171 @@ a {
     overflow: hidden;
 }
 
-
 .container {
     display: flex;
-    flex-direction: row;
     width: 500%;
-    overflow: hidden;
-    /* position: absolute; */
-}
+    flex-direction: row;
 
-.container>div>img {
-    height: 300px;
-    width: 220vh;
 }
 
 .container>div {
     width: 100%;
+    position: relative;
     animation: slides 16s infinite;
 }
 
-.text-me-container {
-    /* position: relative; */
+.container>div>img {
     width: 100%;
-    /* display: flex; */
-    flex-direction: row;
-    overflow: hidden;
+    height: 420px;
+    /* object-fit: cover;  */
 }
 
-.text-me-container>.tex-me-containe {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    padding: 0;
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.text-me-container>.tex-me-containee {
-    /* display: block; */
-    width: 100%;
-    border: 1px solid black;
+.text-overlay1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
 
+.text-overlay h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    letter-spacing: 0.2em;
+    font-weight: lighter;
+}
+
+.text-overlay1 h1 {
+    letter-spacing: 0.3em;
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+.text-overlay span {
+    letter-spacing: 0.5em;
+    color: #2fdab8;
+    font-size: 1.0em;
+    font-weight: bolder;
+}
+
+.text-overlay1 span {
+    letter-spacing: 0.1em;
+    color: #2fdab8;
+    font-size: 1.0em;
+    font-weight: bolder;
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ffb900;
+    letter-spacing: 0.5em;
+}
+
+.text-overlay1 p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ffb900;
+    letter-spacing: 0.5em;
+}
+
+.butt>button {
+     height: 40px;
+     width: 120px;
+     margin-top: 5px;
+     background-color: #42bea5;
+     border: none;
 }
 
 
+.text-overlay>.butt {
+    content: '';
+    position: absolute;
+    
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    height: 50px;
+    width: 150px;
+    transition-property: top, right, left, bottom;
+    margin-left: 40%;
+   
+}
 
+.text-overlay1>.butt {
+    content: '';
+    position: absolute;
+   
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    height: 50px;
+    width: 150px;
+    transition-property: top, right, left, bottom;
+    margin-left: 40%;
+  
+}
+
+.text-overlay .butt:hover {
+    border: 2px solid#4ac7ae;
+}
+
+.text-overlay1 .butt:hover {
+    border: 2px solid#4ac7ae;
+
+}
 
 @keyframes slides {
     0% {
         transform: translateX(0);
-        animation-delay: 3s;
     }
 
-    15% {
-        transform: translateX(0%);
+    16.67% {
+        transform: translateX(0);
     }
 
-    30% {
+    20% {
+        animation-delay: 5s;
         transform: translateX(-100%);
     }
 
-    50% {
+    36.67% {
+        transform: translateX(-100%);
+    }
+
+    40% {
         transform: translateX(-200%);
     }
 
-    75% {
+    56.67% {
+        transform: translateX(-200%);
+    }
+
+    60% {
         transform: translateX(-300%);
+    }
+
+    76.67% {
+        transform: translateX(-300%);
+    }
+
+    80% {
+        transform: translateX(-400%);
+    }
+
+    96.67% {
+        transform: translateX(-400%);
     }
 
     100% {
