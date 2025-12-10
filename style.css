@@ -114,7 +114,8 @@ input[type=search] {
     justify-items: center;
     justify-content: center;
 }
-#search{
+
+#search {
     padding: 11px 15px;
     background-color: #2fdab8;
     border: none;
@@ -158,48 +159,60 @@ a {
     /* margin: 0 10px; */
 }
 
-/* nevigation bar */
-.nav {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: black;
-    padding: 25px;
+
+.nav{
     justify-content: center;
-    justify-items: center;
+    display: flex;
+    padding: 0;
+    background-color: black;
+    align-items: center;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  background-color: black;
+  color: white;
+  gap: 20px;
+  justify-content: center;
 }
 
-.nav>ul>li {
-    display: inline;
-    list-style-type: none;
-    color: white;
-    padding: 25px;
-    border-bottom: 2px solid yellow;
-    animation: yashanimatin 3s ease-in-out  infinite;
+.nav ul li {
+    letter-spacing: 2px;
+  position: relative;
+  margin: 0 10px; /* Adjust spacing as needed */
+  padding:0px 0px;
+  cursor: pointer;
 }
-@keyframes yashanimatin{
-   from{}
-   to{
-    transform: translateX(100px);
-   }
-}
-
-.nav>ul>li>i {
-    font-size: 12px;
-
-}
-
-.chary {
-    display: inline;
+.charry{
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 70px;
+    margin-left: 50px;
     background-color: #2fdab8;
-    height: 100px;
-    width: 300px;
-    padding: 20px 100px;
-    font-size: 25px;
+}
+.charry>a{
+    padding: 10px;
+    background-color:#17c3a2;
+    color: black;
 }
 
-.chary>a>span {
-    background-color: #2da28b;
+
+.nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  width: 0;
+  height: 5px; /* Adjust thickness of the line */
+  background-color:#2fdab8; /* Adjust color as needed */
+  transition: width 0.5s ease; /* Adjust duration and easing */
 }
+
+.nav ul li:hover::after {
+  width: 100%;
+}
+
 
 .me-container {
     width: 100%;
@@ -217,7 +230,7 @@ a {
 .container>div {
     width: 100%;
     position: relative;
-    animation: slides 16s infinite;
+    /* animation: slides 16s infinite; */
 }
 
 .container>div>img {
@@ -288,39 +301,58 @@ a {
     letter-spacing: 0.5em;
 }
 
-.butt>button {
-     height: 40px;
-     width: 120px;
-     margin-top: 5px;
-     background-color: #42bea5;
-     border: none;
+.shopenow>button {
+    position: relative;
+    height: 40px;
+    width: 120px;
+    margin-top: 5px;
+    background-color: #42bea5;
+    border: none;
+    z-index: 10;
+}
+
+.sh-br{
+
+    top: 73%;
+    left: 41%;
+    position: absolute;
+    /* background-color: #ffb900; */
+    padding: 18px 55px;
+    border: 5px solid #17c3a2;
+    transition: all 0.5s ease;
+    z-index: 5;
+    
+}
+
+.shopenow:hover>.sh-br{
+    transform: scale(1.3);
 }
 
 
 .text-overlay>.butt {
     content: '';
     position: absolute;
-    
+
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     height: 50px;
     width: 150px;
     transition-property: top, right, left, bottom;
     margin-left: 40%;
-   
+
 }
 
 .text-overlay1>.butt {
     content: '';
     position: absolute;
-   
+
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
     height: 50px;
     width: 150px;
     transition-property: top, right, left, bottom;
     margin-left: 40%;
-  
+
 }
 
 .text-overlay .butt:hover {
@@ -428,7 +460,7 @@ a {
 .im {
     display: flex;
     position: relative;
-    background-image: url("midel2.jpg");
+    background-image: url("./img/midel2.jpg");
     height: 250px;
     width: 300px;
     padding-left: 120px;
@@ -460,7 +492,7 @@ a {
 }
 
 .im1 {
-    background-image: url('./midal2.jpg');
+    background-image: url('./img/midal2.jpg');
 }
 
 
@@ -482,6 +514,73 @@ a {
     text-transform: uppercase;
     font-size: 1em;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.img-main {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    display: flex;
+    background-color: #2fdab8;
+}
+
+.photo {
+    height: 400px;
+    width: 80%;
+    background-color: black;
+}
+
+.img-main>.photo>img {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+}
+.card>.incard>h2{
+    margin: 22px 0;
+    text-transform: uppercase;
+}
+
+.cl-data {
+    display: flex;
+   justify-content: space-around;
+    left: 100px;
+    margin: 50px 0;
+}
+
+.incard {
+    background-color: white;
+    width: 80%;
+    padding-left: 30px;
+    padding-right: 20px;
+    box-shadow: 5px 0px 10px #19a98c;
+}
+
+
+.card>.incard>h2>span{
+  color: #fc636b;
+}
+.card>.incard>p{
+    margin-top: 20px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.clear-fix{
+    text-align: center;
+    line-height: 30px;
+}
+.cl-data>.clear-fix>p>i{
+    color:#19a98c ;
+    font-size: 22px;
+}
+
+
 
 
 
