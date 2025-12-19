@@ -3,7 +3,6 @@
     padding: 0;
     font-family: 'Open sans', sans-serif;
 }
-
 .containerimgmain {
     position: fixed;
     top: 0;
@@ -73,6 +72,16 @@
     justify-content: center;
 }
 
+.sign {
+    padding-right: 10px;
+    font-size: 0.7em;
+    color: rgb(0, 255, 191);
+}
+
+.h a {
+    color: white;
+}
+
 .h2 {
     width: 250px;
     display: flex;
@@ -80,6 +89,16 @@
     border-right: 1px solid wheat;
     justify-content: center;
     align-content: center;
+}
+
+.h2>.sign {
+    padding-right: 10px;
+    padding-top: 3.8px;
+}
+
+.h3>.sign {
+    padding-right: 10px;
+    padding-top: 3.8px;
 }
 
 .h3 {
@@ -96,13 +115,13 @@
     text-decoration: none;
 }
 
-.search {
+.search-main {
     background-color: red;
     height: 100px;
 }
 
 .form {
-    background-color: white;
+    background-color: red;
     padding: 30px;
     background-position: 10px 10px;
     box-sizing: border-box;
@@ -171,6 +190,87 @@ a {
     padding: 5px;
     /* margin: 0 10px; */
 }
+
+
+
+.share-main ul li {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.fbb {
+    background: #3b5998;
+}
+
+.tww {
+    background: #1da1f2;
+}
+
+.inss {
+    background: #b32d2d;
+}
+
+.linn {
+    background: #2b3fa4;
+}
+
+.share-main ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.social-itam {
+    width: 35px;
+    height: 35px;
+    perspective: 1000px;
+}
+
+.cuba {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+/* Face Shared Styles */
+.faca {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+
+/* Front Face (Original State) */
+.faca.fronta {
+    transform: rotateY(0deg) translateZ(10px);
+    color: #fff;
+}
+
+/* Back Face */
+.faca.backa {
+    background: #fff;
+    color: #000;
+    transform: rotateX(90deg) translateZ(10px);
+}
+
+/* Hover Effect: Rotate the whole cube */
+.social-itam:hover .cuba {
+    transform: rotateX(-90deg);
+}
+
+
+
 
 
 .nav {
@@ -1168,7 +1268,7 @@ a {
     /* left: 1%; */
     height: 25px;
     width: 96%;
-    border: 5px solid #17c3a2 ;
+    border: 5px solid #17c3a2;
     /* margin-right: 50px; */
     transition: all 0.5s ease-in-out;
     cursor: pointer;
@@ -1185,7 +1285,7 @@ a {
     display: flex;
     height: 150px;
     width: 100%;
-    border: 1px solid;   
+    border: 1px solid;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -1210,7 +1310,7 @@ a {
     /* border: 1px solid; */
     background-color: black;
     margin-left: 10px;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 .bottom-main>.bottom1>.bottom2>.ii {
@@ -1222,8 +1322,9 @@ a {
     align-items: center;
     /* margin-top: 15px; */
     cursor: pointer;
-   
+
 }
+
 .bottom-main>.bottom1>.bottom2>.ii>i {
     font-size: 26px;
     color: #000;
@@ -1271,7 +1372,7 @@ a {
     margin-left: 20px;
 }
 
-.inform>h5{
+.inform>h5 {
     height: 1px;
     margin: 0;
     padding-bottom: 5px;
@@ -1309,12 +1410,12 @@ footer {
     padding: 0 20px;
 }
 
-.brand a:link{
+.brand a:link {
     text-decoration: none;
     color: white;
 }
 
-.brand a:visited{
+.brand a:visited {
     text-decoration: none;
     color: white;
 
@@ -1367,7 +1468,7 @@ footer {
     margin-top: 20px;
 }*/
 
-.share{
+.share {
     padding-top: 30px;
 }
 
@@ -1382,10 +1483,21 @@ footer {
     cursor: pointer;
 }
 
-.fb { background: #3b5998; }
-.tw { background: #1da1f2; }
-.ins { background: #b32d2d; }
-.lin { background: #2b3fa4; }
+.fb {
+    background: #3b5998;
+}
+
+.tw {
+    background: #1da1f2;
+}
+
+.ins {
+    background: #b32d2d;
+}
+
+.lin {
+    background: #2b3fa4;
+}
 
 .share ul {
     display: flex;
@@ -1404,7 +1516,7 @@ footer {
     height: 100%;
     position: relative;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease; 
+    transition: transform 0.5s ease;
 }
 
 /* Face Shared Styles */
@@ -1444,7 +1556,10 @@ footer {
 
 
 /* Links Section */
-.links ul { list-style: none; }
+.links ul {
+    list-style: none;
+}
+
 .links ul li {
     display: block;
     text-align: left;
@@ -1454,19 +1569,19 @@ footer {
     cursor: pointer;
 }
 
-.links ul li a:link{
+.links ul li a:link {
     color: gray;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
-.links ul li a:hover{
+.links ul li a:hover {
     transition: 0.3s ease-in;
     color: aqua;
     /* background-color: #2fdab8; */
 }
 
 .links ul li:hover {
-    color: aqua; 
+    color: aqua;
     transition: 0.5s ease-in-out;
 }
 
@@ -1485,7 +1600,7 @@ footer {
     margin-top: 5px;
 }
 
-.contact-item p{
+.contact-item p {
     color: gray;
 }
 
@@ -1494,7 +1609,15 @@ footer {
     margin-bottom: 5px;
 }
 
-.email-link { color: #2fdab8; }
+.email-link a {
+    color: #2fdab8;
+    transition: all 0.4s ease-in-out;
+}
+
+.email-link a:hover {
+    transition: all 0.5s ease-in-out;
+    color: whitesmoke;
+}
 
 /* Flickr Grid */
 .flickr-grid {
@@ -1518,8 +1641,8 @@ footer {
     align-items: center;
 }
 
-.footer-down h4 { 
-    margin-bottom: 0; 
+.footer-down h4 {
+    margin-bottom: 0;
 }
 
 .newsletter-form {
@@ -1545,6 +1668,7 @@ footer {
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
+
 .newsletter-form button:hover {
     background-color: white;
     color: #000;
