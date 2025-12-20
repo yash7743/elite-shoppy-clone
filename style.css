@@ -166,16 +166,19 @@ a {
     display: inline;
 }
 
-.box>h1>a {
-    font-weight: 1;
-    font-size: 1.5em;
+.box>h1{
+    font-weight: 100;
+    font-size: 2.2em;
 }
 
 .box>h1>a>span {
     background-color: black;
     color: white;
-    font-size: 50px;
+    font-size: 1em;
+    padding-left: 5px;
+    padding-right: 5px;
     display: inline;
+    font-weight: 600;
 }
 
 .end {
@@ -297,6 +300,9 @@ a {
     /* Adjust spacing as needed */
     padding: 0px 0px;
     cursor: pointer;
+}
+.nav ul li a{
+    color: white;
 }
 
 .charry {
@@ -568,7 +574,7 @@ a {
     justify-items: center;
 }
 
-.m {
+ .m{
     background-color: white;
     display: flex;
     flex-wrap: wrap;
@@ -622,7 +628,7 @@ a {
 }
 
 .adjest {
-    padding-left: 100px;
+    padding-left: 180px;
     padding-top: 60px;
     color: aqua;
 }
