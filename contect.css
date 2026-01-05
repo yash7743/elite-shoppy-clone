@@ -279,88 +279,221 @@ a {
 
 
 
-.nava {
-    justify-content: center;
-    display: flex;
-    padding: 0;
-    background-color: black;
-    align-items: center;
+/* ================= NAV BAR ================= */
+.nava{
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    background: black;
-    padding: 15px 0;
+.nav{
+    display:flex;
+    list-style:none;
+    align-items:center;
 }
 
-.nav li {
-    list-style: none;
-    margin: 0 15px;
-    position: relative;
+.nav li{
+    position:relative;
+    margin:0 20px;
 }
 
-.nav li a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
+.nav a,
+.nav label{
+    color:white;
+    text-decoration:none;
+    letter-spacing:2px;
+    cursor:pointer;
 }
 
 /* underline */
-.nav li::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -12px;
-    width: 0;
-    height: 4px;
-    background: #2fdab8;
-    transition: width 0.4s ease;
+.nav li::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:0;
+    height:3px;
+    background:#2fdab8;
+    transition:.3s;
+}
+.nav li:hover::after{
+    width:100%;
 }
 
-/* hover */
-.nav li:hover::after {
-    width: 100%;
+/* ================= MENU ITEM ================= */
+.menu-item input{
+    display:none;
+}
+/* ================= DROPDOWN ================= */
+.mens-box{
+    position:absolute;
+    top:35px;
+    left:0;
+    width:550px;
+    height:240px;
+    background:white;
+    display:none;
+    gap:20px;
+    padding:15px;
+    z-index:100;
 }
 
-/* CLICK & HOLD (TARGET) */
-.nav li:target::after {
-    width: 100%;
+/* OPEN ON CLICK */
+/* OPEN ON CLICK */
+#mens-toggle:checked ~ .mens-box{
+    display:flex;
 }
 
-.charry {
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 70px;
-    margin-left: 50px;
-    background-color: #2fdab8;
+#womens-toggle:checked ~ .womens-box{
+    display:flex;
 }
 
-.charry>a {
-    padding: 10px;
-    background-color: #17c3a2;
-    color: black;
+#mens-toggle:checked ~ .mens-box{
+    display:flex;
+}
+
+#womens-toggle:checked ~ .womens-box{
+    display:flex;
 }
 
 
-.nav ul li::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    width: 0;
-    height: 5px;
-    /* Adjust thickness of the line */
-    background-color: #2fdab8;
-    /* Adjust color as needed */
-    transition: width 0.5s ease;
-    /* Adjust duration and easing */
+
+/* ================= LEFT IMAGE ================= */
+.dropdown-img{
+    width:250px;
+    height:95%;
+    /* margin-top: px; */
 }
 
-.nav ul li:hover::after {
-    width: 100%;
+.dropdown-me{
+    position:relative;  
+    width:250px;
+    height:99%;
+    background:url(./img/banner10.jpg) center/cover no-repeat;
+    overflow:hidden;
+    /* margin-top: 10px; */
 }
+.dropdown-me1{
+    position:relative;  
+    width:250px;
+    height:99%;
+    background:url(./img/top1.jpg) center/cover no-repeat;
+    overflow:hidden;
+    /* margin-top: 10px; */
+}
+
+
+.womens-box{
+     position:absolute;
+    top:35px;
+    left:0;
+    width:550px;
+    height:240px;
+    background:white;
+    display:none;
+    gap:20px;
+    padding:15px;
+    z-index:100;
+}
+
+
+
+/* TRANSITION EFFECT */
+.dropdown-transition{
+    position:absolute;
+    width:100%;
+    height:100%;
+}
+
+.tran-1{
+    position:absolute;
+    top:-500px;
+    left:1000px;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.15);
+    transition:1s;
+}
+
+.tran-2{
+    position:absolute;
+    top:500px;
+    left:-1000px;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.15);
+    transition:1s;
+}
+
+.dropdown-me:hover .tran-1,
+.dropdown-me:hover .tran-2{
+    top:0;
+    left:0;
+}
+.dropdown-me1:hover .tran-1,
+.dropdown-me1:hover .tran-2{
+    top:0;
+    left:0;
+}
+
+/* ================= RIGHT LINKS ================= */
+
+
+/* ===== WOMENS NAV DROPDOWN LAYOUT FIX ===== */
+
+/* force horizontal layout */
+.womens-box{
+    display:none;            /* keep default closed */
+    flex-direction:row;      /* left → right */
+}
+
+/* checkbox / radio open */
+#womens-toggle:checked ~ .womens-box{
+    display:flex;
+}
+
+/* LEFT SIDE : links */
+.womens-box .item-contect,
+.womens-box .item2-contect{
+    width:150px;
+    order:1;
+    /* gap: 100px; */
+}
+
+.item-contect a:hover{
+    color: #17c3a2;
+}
+.item2-contect a:hover{
+    color: #17c3a2;
+}
+.item-contect a{
+    color: rgba(0, 0, 0, 0.493);
+    line-height: 32px;
+}
+.item2-contect a{
+    color: rgba(0, 0, 0, 0.493);
+  
+    line-height: 32px;
+}
+/* RIGHT SIDE : image */
+.womens-box .dropdown-img{
+    order:2;
+    margin-left:auto;        /* push image to right */
+}
+
+
+/* ================= CART ================= */
+.charry{
+    margin-left:30px;
+    background:#2fdab8;
+    padding:18px 40px;
+}
+
+.charry a{
+    color:black;
+}
+
 
 /* about code */
 .banner-card {
