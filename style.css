@@ -1650,10 +1650,10 @@ footer {
 }
 
 /* Social Icons */
-/* .share ul {
+.share ul {
     list-style: none;
     margin-top: 20px;
-}*/
+}
 
 .share {
     padding-top: 30px;
@@ -1747,13 +1747,14 @@ footer {
     list-style: none;
 }
 
-.links ul li {
+.links ul li a{
     display: block;
     text-align: left;
     margin-bottom: 12px;
     font-size: 14px;
     /* transition: 0.3s ease-in; */
     cursor: pointer;
+    color: rgb(184, 184, 184);
 }
 
 .links ul li a:link {
