@@ -3,6 +3,10 @@
     padding: 0;
     font-family: 'Open sans', sans-serif;
 }
+
+
+
+
 .containerimgmain {
     position: fixed;
     top: 0;
@@ -280,6 +284,37 @@ a {
 
 
 
+
+@media (max-width: 992px){
+    .hed{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .h, .h1, .h2, .h3{
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid wheat;
+        padding: 10px 0;
+    }
+
+    .nava{
+        flex-direction: column;
+    }
+
+    .nav{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav li{
+        margin: 10px 0;
+    }
+}
+
+
+
+
 /* ================= NAV BAR ================= */
 .nava{
     background:black;
@@ -527,6 +562,7 @@ a {
 }
 
 .text-overlay {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -534,9 +570,16 @@ a {
     text-align: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-overlay1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -588,27 +631,28 @@ a {
     letter-spacing: 0.5em;
 }
 
+
 .shopenow>button {
     position: relative;
     height: 40px;
-    width: 120px;
+    width:120px;
     margin-top: 5px;
     background-color: #42bea5;
     border: none;
     z-index: 10;
 }
 
-.sh-br {
-
-    top: 73%;
+.sh-br { 
+    top: 74.54%;
     left: 41%;
     position: absolute;
     /* background-color: #ffb900; */
-    padding: 18px 58px;
+    height: 38px;
+    width: 115px;
     border: 5px solid #17c3a2;
     transition: all 0.5s ease;
     z-index: 5;
-
+    
 }
 
 .shopenow:hover>.sh-br {
